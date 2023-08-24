@@ -153,7 +153,7 @@ void initMemory(Memory *mem, Lattice net, Params p){
 			// and it's random for t<0
 			seed = lcg(seed);
 			mem->hist[i][0] = net.players[i];
-			mem->hist[i][j] = ((double) seed/4294967295) < 0.5 ? 0 : 1;
+			mem->hist[i][j] = gsl_rng_uniform(r) * 2;
 #endif
 		}
 	}
