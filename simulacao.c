@@ -48,8 +48,8 @@ int main(int argc, char *argv[]){
 	initMemory(&mem, net, p);
 
 	///////// debug /////////
-	printNet(net);
-	printMemory(mem, p);
+	/* printNet(net); */
+	/* printMemory(mem, p); */
 	////////////////////////
 
 	int t;	// time
@@ -119,12 +119,12 @@ int main(int argc, char *argv[]){
 	freeHK(&hks);
 
 	// snapshots
-	/* lpp = linksPerPlayer(net); */
-	/* sprintf(snpsht, "snpsht3_r%.4lf_L%d_S%d_M%d_tau%.4f.eps", */
-	/* 		p.r, p.L, p.seed, p.M, p.tau); */
+	lpp = linksPerPlayer(net);
+	sprintf(snpsht, "snpsht3_r%.4lf_L%d_S%d_M%d_tau%.4f.eps",
+			p.r, p.L, p.seed, p.M, p.tau);
 
-	/* openlat(p.L, 4); */
-	/* printlat(net, hks, lpp, snpsht, 4); */
+	openlat(p.L, 4);
+	printlat(net, hks, lpp, snpsht, 4);
 
 
 	///////// debug ////////
