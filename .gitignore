@@ -1,0 +1,4 @@
+exe
+dados/*
+batch_avg.sh
+media.awk
