@@ -1,4 +1,5 @@
 exe
 dados/*
+dados_cluster/*
 batch_avg.sh
 media.awk
