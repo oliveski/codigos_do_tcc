@@ -131,6 +131,10 @@ void initMemory(Memory *mem, Lattice net, Params p){
 #ifdef DELTA
 		mem->n[i] = p.M;
 #endif
+#ifdef UNIF
+		mem->n[i] = 1 + gsl_rng_uniform(r) * p.M;
+
+#endif
 		for(int j = 1; j < p.M; j++){
 			// my history is equal to my strategy at t=0
 			// this is initial condition memory
